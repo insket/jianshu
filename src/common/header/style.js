@@ -50,22 +50,59 @@ export const NavItem = styled.div`
   }
 `;
 
+// SearchWrapper
+export const SearchWrapper = styled.div`
+  float: left;
+  position: relative;
+  .iconfont{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 2px;
+    right: 1px;
+    line-height:30px;
+    border-radius: 50%;
+    text-align: center;
+    color: #ccc;
+    &.foucsed{
+      background: #ccc;
+      color: #fff;
+    }
+  }
+`
+
 // NavSearch
 export const NavSearch = styled.input.attrs({
   placeholder: '搜索'
 })`
   width: 160px;
   height: 34px;
-  padding: 0 20px;
+  padding: 0 40px 0 20px;
   box-sizing: border-box;
   border: none;
   outline:none;
   border-radius: 19px;
   background: #eee;
   margin-top: 11px;
+  color: #777;
   font-size: 14px;
   &::placeholder{
     color: #999;
+  }
+  &.foucsed{
+    width: 240px;
+  }
+  &.slider-enter{
+    transition: all .2s linear;
+  }
+  &.slider-enter-active{
+    width: 240px;
+  }
+  &.slider-exit{
+    transition: all .2s linear;
+  }
+  &.slider-exit-active{
+    width: 160px;
   }
 `
 
@@ -85,6 +122,7 @@ export const Button = styled.div`
   margin-right:20px;
   padding: 0 20px;
   border: 1px solid #ec6149;
+  box-sizing: border-box;
   &.reg{
     color: #ec6149;
     font-size: 14px;
@@ -93,5 +131,8 @@ export const Button = styled.div`
     color: #fff;
     background: #ec6149;
     font-size: 14px;
+    &.iconfont{
+      font-size: 12px;
+    }
   }
 `
