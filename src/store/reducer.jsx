@@ -1,19 +1,8 @@
-const defaultState = {
-   // 定义 input 收缩 状态
-   focused: false
-}
+import { combineReducers } from 'redux'
+import headerReducer from '../common/header/store/reducer'
 
-export default function reducer (state = defaultState, action) {
-  switch (action.type) {
-    case 'search_focus':
-      return {
-        focused: true
-      }
-    case 'search_blur':
-      return {
-        focused: false
-      }
-    default:
-      return state
-  }
-}
+const reducer = combineReducers({
+  hader: headerReducer
+})
+
+export default reducer
